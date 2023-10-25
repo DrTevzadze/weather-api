@@ -35,22 +35,6 @@ function App() {
         />
         <button onClick={fetchApi}>Search</button>
       </div>
-      <div className="city">
-        <h1>London</h1>
-      </div>
-      <div className="temp">
-        <h1>21 C</h1>
-      </div>
-      <div className="second-container">
-        <div className="humidity">
-          <h1>Humidity</h1>
-          <h2>21 %</h2>
-        </div>
-        <div className="wind">
-          <h1>Wind</h1>
-          <h2>24 km/h</h2>
-        </div>
-      </div>
 
       {data.name ? (
         <>
