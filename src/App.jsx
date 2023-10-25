@@ -8,14 +8,16 @@ const baseUrl = "https://api.openweathermap.org/data/2.5/";
 
 function App() {
   const fetchApi = async () => {
-    const response = await fetch(`${baseUrl}weather?q=london&appid=${apiKey}`);
     try {
-      if (response.ok) {
-        const jsonResponse = await response.json();
+      const response = await axios.get(
+        "https://api.openweathermap.org/data/2.5/weather?q=london&appid=3720679616f1bfccdf200adb5db3dca7"
+      );
+      if (response.status === 200) {
+        const jsonResponse = await response.data;
         console.log(jsonResponse);
       }
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   };
 
